@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import BookCard from "../../components/BookCard";
 
 const bookUrl = import.meta.env.VITE_API;
 const keyApi = import.meta.env.VITE_API_KEY;
@@ -16,7 +17,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const booksLinksUrl = `${bookUrl}?q=pai&key=${keyApi}`;
+    const booksLinksUrl = `${bookUrl}?q=poter&maxResults=10&key=${keyApi}`;
 
     getBooks(booksLinksUrl);
   }, []);
@@ -24,8 +25,11 @@ const Home = () => {
   return (
     <div>
       <h1>Livros</h1>
-      {books.length > 0 &&
-        books.map((item) => <p key={item.id}>{item.volumeInfo.title}</p>)}
+      <div>
+        {books.length === 0 && <p>Carregando...</p>}
+        {books.length > 0 &&
+          books.map((book) => <BookCard key={book.id} book={book} />)}
+      </div>
     </div>
   );
 };
