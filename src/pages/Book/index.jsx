@@ -30,6 +30,20 @@ const Books = () => {
       {book && (
         <>
           <BookCard book={book} showLink={false} />
+          <div>
+            <strong>
+              {book.volumeInfo.authors.length > 1 ? "Autores:" : "Autor:"}
+            </strong>
+            <ul>
+              {book.volumeInfo.authors.map((author) => (
+                <li>{author}</li>
+              ))}
+            </ul>
+          </div>
+          <p>
+            <span>Total de páginas: </span>
+            {book.volumeInfo.pageCount}
+          </p>
           {book.volumeInfo.description}
         </>
       )}
