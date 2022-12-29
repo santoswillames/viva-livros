@@ -18,8 +18,6 @@ const Search = () => {
     const response = await res.json();
 
     setBooks(response.items);
-
-    console.log(response);
   };
 
   useEffect(() => {

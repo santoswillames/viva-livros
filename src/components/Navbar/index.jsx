@@ -20,11 +20,18 @@ const Navbar = () => {
 
   return (
     <nav id="navbar">
-      <h2>
+      <div className="logo">
         <Link to="/">
-          <GiSpellBook /> Tudo Sobre Livros
+          <img
+            src="/public/book-svgrepo-com-colors.svg"
+            alt="icone de um livro"
+          />
+          <div className="logo-text">
+            <p>Viva</p>
+            <p>Livros</p>
+          </div>
         </Link>
-      </h2>
+      </div>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

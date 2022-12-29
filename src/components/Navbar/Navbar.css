@@ -1,0 +1,39 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-text p {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+#navbar form {
+  display: flex;
+  gap: 0.5rem;
+}
+#navbar input {
+  padding: 0.2rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+}
+
+#navbar form button {
+  background-color: #a1a1aa;
+  border: 2px solid #a1a1aa;
+  border-radius: 4px;
+  color: #18181b;
+  padding: 0.3rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

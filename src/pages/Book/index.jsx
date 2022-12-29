@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "./Book.css";
 import BookCard from "../../components/BookCard";
 
 const bookUrl = import.meta.env.VITE_API;
