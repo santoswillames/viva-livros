@@ -15,8 +15,6 @@ const Books = () => {
     const response = await res.json();
 
     setBook(response);
-
-    console.log(response);
   };
 
   useEffect(() => {
