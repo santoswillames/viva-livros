@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1>Livros</h1>
+      <h1>Livros Recomendados</h1>
       <div>
         {books.length === 0 && <p>Carregando...</p>}
         {books.length > 0 &&
