@@ -19,3 +19,20 @@ a {
 a:hover {
   opacity: 0.7;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2rem 2rem;
+}
+
+.content {
+  gap: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}

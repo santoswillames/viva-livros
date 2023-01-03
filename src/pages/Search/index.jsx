@@ -27,11 +27,11 @@ const Search = () => {
   }, [query]);
 
   return (
-    <div>
+    <div className="container">
       <h2>
         Resultados para: <span>{query}</span>
       </h2>
-      <div>
+      <div className="content">
         {books.length === 0 && <p>Carregando...</p>}
         {books.length > 0 &&
           books.map((book) => <BookCard key={book.etag} book={book} />)}

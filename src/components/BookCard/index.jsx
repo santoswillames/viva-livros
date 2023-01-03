@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import IconBook from "../../assets/no_cover_thumb.jpg";
+import "./BookCard.css";
 
 const BookCard = ({ book, showLink = true }) => {
   return (
-    <div className="movie-card">
+    <div className="book-card">
       <img
         src={
           book.volumeInfo.imageLinks
@@ -12,9 +13,16 @@ const BookCard = ({ book, showLink = true }) => {
         }
         alt={book.volumeInfo.title}
       />
-      <h2>{book.volumeInfo.title}</h2>
+      <div className="book-info">
+        <h2>{book.volumeInfo.title}</h2>
+        <p>Classificação: {book.volumeInfo.averageRating}</p>
 
-      {showLink && <Link to={`/book/${book.id}`}>Detalhes</Link>}
+        {showLink && (
+          <button>
+            <Link to={`/book/${book.id}`}>Detalhes</Link>
+          </button>
+        )}
+      </div>
     </div>
   );
 };

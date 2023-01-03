@@ -1,0 +1,12 @@
+.book-card {
+  width: 36rem;
+  height: 18rem;
+  background-color: #fafafa;
+  border-radius: 4px;
+  display: flex;
+}
+
+.book-card img {
+  width: 32%;
+  height: 100%;
+}

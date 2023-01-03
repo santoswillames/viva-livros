@@ -15,18 +15,18 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const booksLinksUrl = `${bookUrl}?q=poter&maxResults=10&key=${keyApi}`;
+    const booksLinksUrl = `${bookUrl}?q=poter&langRestrict=br&projection=full&key=${keyApi}`;
 
     getBooks(booksLinksUrl);
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <h1>Livros Recomendados</h1>
-      <div>
+      <div className="content">
         {books.length === 0 && <p>Carregando...</p>}
         {books.length > 0 &&
-          books.map((book) => <BookCard key={book.id} book={book} />)}
+          books.map((book) => <BookCard key={book.etag} book={book} />)}
       </div>
     </div>
   );
