@@ -22,12 +22,16 @@ const BookCard = ({ book, showLink = true }) => {
           <ul>
             {book.volumeInfo.authors &&
               book.volumeInfo.authors.map((author) => (
-                <li key={book.etag}>{author}</li>
+                <li key={book.etag + Math.random() * 10}>{author}</li>
               ))}
           </ul>
         </div>
         <p>Editor: {book.volumeInfo.publisher} </p>
-        <p>Ano de Publicação: {book.volumeInfo.publishedDate.slice(0, 4)}</p>
+        <p>
+          Ano de Publicação:{" "}
+          {book.volumeInfo.publishedDate &&
+            book.volumeInfo.publishedDate.slice(0, 4)}
+        </p>
         <p>
           <span>Total de páginas: </span>
           {book.volumeInfo.pageCount}
