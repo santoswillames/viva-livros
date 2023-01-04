@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { GiSpellBook, GiArchiveResearch } from "react-icons/gi";
 
 import "./Navbar.css";
+import Logo from "../Logo";
 
 const Navbar = () => {
   const [search, setSearch] = useState("");
@@ -20,18 +21,7 @@ const Navbar = () => {
 
   return (
     <nav id="navbar">
-      <div className="logo">
-        <Link to="/">
-          <img
-            src="/public/book-svgrepo-com-colors.svg"
-            alt="icone de um livro"
-          />
-          <div className="logo-text">
-            <p>Viva</p>
-            <p>Livros</p>
-          </div>
-        </Link>
-      </div>
+      <Logo />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
