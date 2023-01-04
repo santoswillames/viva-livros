@@ -14,7 +14,6 @@ const Books = () => {
   const getBook = async (url) => {
     const res = await fetch(url);
     const response = await res.json();
-    console.log(response);
 
     setBook(response);
   };
@@ -30,19 +29,6 @@ const Books = () => {
       {book && (
         <>
           <BookCard book={book} showLink={false} />
-          <div>
-            <strong>Autores:</strong>
-            <ul>
-              {book.volumeInfo.authors &&
-                book.volumeInfo.authors.map((author) => (
-                  <li key={book.id}>{author}</li>
-                ))}
-            </ul>
-          </div>
-          <p>
-            <span>Total de páginas: </span>
-            {book.volumeInfo.pageCount}
-          </p>
           {book.volumeInfo.description}
         </>
       )}

@@ -12,6 +12,7 @@ const Search = () => {
   const [books, setBooks] = useState([]);
 
   const query = searchParams.get("q");
+  const newQuery = query.replace(" ", "+");
 
   const getBooks = async (url) => {
     const res = await fetch(url);
@@ -21,7 +22,7 @@ const Search = () => {
   };
 
   useEffect(() => {
-    const booksLinksUrl = `${bookUrl}?q=${query}+intitle:${query}&key=${keyApi}`;
+    const booksLinksUrl = `${bookUrl}?q=${newQuery}&key=${keyApi}`;
 
     getBooks(booksLinksUrl);
   }, [query]);
