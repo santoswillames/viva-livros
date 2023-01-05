@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { GiSpellBook, GiArchiveResearch } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
+import { GiArchiveResearch } from "react-icons/gi";
 
 import "./Navbar.css";
 import Logo from "../Logo";
