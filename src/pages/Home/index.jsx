@@ -15,7 +15,7 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const booksLinksUrl = `${bookUrl}?q=poter&langRestrict=br&projection=full&key=${keyApi}`;
+    const booksLinksUrl = `${bookUrl}?q=javascript&langRestrict=br&projection=full&key=${keyApi}`;
 
     getBooks(booksLinksUrl);
   }, []);

@@ -14,27 +14,51 @@
 }
 
 .book-info {
+  width: 100%;
+  height: 100%;
   padding: 1rem;
   font-size: 14px;
 }
 
 .book-info h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: 5px;
+  margin-bottom: 2px;
 }
 
 .authors {
-  padding: 0.5rem 0;
-  border-radius: 4px;
-  background-color: #e4e4e7;
+  margin: 2px 0;
 }
+
+.book-info p {
+  padding: 2px;
+}
+
 .book-info ul {
   display: flex;
-  gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .book-info ul li {
+  margin: 0 2px;
   appearance: none;
   list-style: none;
+}
+
+.book-info button {
+  padding: 0.4rem;
+  margin-top: 14px;
+  width: 50%;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #d1d5db;
+  outline: none;
+  appearance: none;
+  text-decoration: none;
+  border: 1px solid #27272a;
+  transition: all ease 0.3s;
+}
+
+.book-info button:hover {
+  opacity: 0.8;
 }

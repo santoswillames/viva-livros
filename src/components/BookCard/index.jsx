@@ -39,15 +39,10 @@ const BookCard = ({ book, showLink = true }) => {
           {book.volumeInfo.pageCount}
         </p>
         {showLink && (
-          <button>
-            <Link to={`/book/${book.id}`}>
-              Detalhes <BsFillInfoCircleFill />
-            </Link>
-          </button>
+          <Link to={`/book/${book.id}`}>
+            <button>Detalhes</button>
+          </Link>
         )}
-        <button>
-          Ouça <BsYoutube />
-        </button>
       </div>
     </div>
   );
