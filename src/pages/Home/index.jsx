@@ -22,7 +22,9 @@ const Home = () => {
 
   return (
     <div className="container">
-      <h1>Livros Recomendados</h1>
+      <h1 style={{ marginBottom: "8px" }}>
+        Livros que nós recomendamos para você!
+      </h1>
       <div className="content">
         {books.length === 0 && <p>Carregando...</p>}
         {books.length > 0 &&

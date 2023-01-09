@@ -25,12 +25,13 @@ const Books = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
+      {!book && <p>Carregando...</p>}
       {book && (
-        <>
+        <div className="content description">
           <BookCard book={book} showLink={false} />
-          {book.volumeInfo.description}
-        </>
+          <p>{book.volumeInfo.description}</p>
+        </div>
       )}
     </div>
   );

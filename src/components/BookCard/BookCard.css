@@ -4,9 +4,37 @@
   background-color: #fafafa;
   border-radius: 4px;
   display: flex;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(107, 114, 128, 0.5);
 }
 
 .book-card img {
   width: 32%;
   height: 100%;
+}
+
+.book-info {
+  padding: 1rem;
+  font-size: 14px;
+}
+
+.book-info h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.authors {
+  padding: 0.5rem 0;
+  border-radius: 4px;
+  background-color: #e4e4e7;
+}
+.book-info ul {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-info ul li {
+  appearance: none;
+  list-style: none;
 }

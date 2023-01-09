@@ -16,17 +16,19 @@ const BookCard = ({ book, showLink = true }) => {
       />
       <div className="book-info">
         <h3>{book.volumeInfo.title}</h3>
-        <p>Classificação: {book.volumeInfo.averageRating}</p>
-        <div>
+        <p>
+          Classificação: {book.volumeInfo.averageRating || "Não Classificado"}
+        </p>
+        <div className="authors">
           <strong>Autores:</strong>
           <ul>
             {book.volumeInfo.authors &&
               book.volumeInfo.authors.map((author) => (
-                <li key={book.etag + Math.random() * 10}>{author}</li>
+                <li key={book.etag + Math.random() * 10}>{author};</li>
               ))}
           </ul>
         </div>
-        <p>Editor: {book.volumeInfo.publisher} </p>
+        <p>Editor: {book.volumeInfo.publisher || "Não encontrado"} </p>
         <p>
           Ano de Publicação:{" "}
           {book.volumeInfo.publishedDate &&
