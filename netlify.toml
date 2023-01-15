@@ -1,0 +1,8 @@
+[build]
+base = "."
+command = "npm run build"
+publish = "./build/"
+
+[build.environment]
+VITE_API_KEY = "AIzaSyB0cHckVpLt-wFicJZr03eOwrF9TV3UCB8"
+VITE_API = "https://www.googleapis.com/books/v1/volumes"
