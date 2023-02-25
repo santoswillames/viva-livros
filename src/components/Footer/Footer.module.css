@@ -1,0 +1,39 @@
+.wrapper {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  background: var(--cyan1);
+  color: var(--cyan12);
+}
+
+.wrapper div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.wrapper .iconsFooter {
+  display: flex;
+  gap: 1rem;
+}
+
+.wrapper a {
+  color: var(--cyan12);
+}
+
+@media (max-width: 580px) {
+  .wrapper {
+    padding: 0 0.6rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .wrapper div:last-child {
+    padding: 1rem 0.6rem;
+    align-items: center;
+    gap: 0.8rem;
+    flex-direction: row;
+  }
+}

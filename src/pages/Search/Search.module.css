@@ -1,0 +1,15 @@
+.wrapper {
+  margin-bottom: 2rem;
+}
+
+.wrapper h2 {
+  margin-bottom: 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}

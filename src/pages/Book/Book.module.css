@@ -1,0 +1,12 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.description {
+  margin-bottom: 3rem;
+  text-align: justify;
+}

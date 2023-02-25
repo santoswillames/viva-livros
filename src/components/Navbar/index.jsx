@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { GiArchiveResearch } from "react-icons/gi";
+import { RxMagnifyingGlass } from "react-icons/rx";
 
-import "./Navbar.css";
+import styles from "./Navbar.module.css";
+
 import Logo from "../Logo";
 
 const Navbar = () => {
@@ -20,20 +21,22 @@ const Navbar = () => {
   };
 
   return (
-    <nav id="navbar">
-      <Logo />
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Busque um livro"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        <button type="submit">
-          <GiArchiveResearch />
-        </button>
-      </form>
-    </nav>
+    <div className="container header">
+      <div className={styles.nav}>
+        <Logo />
+        <form onSubmit={handleSubmit} className={styles.formSearch}>
+          <input
+            type="text"
+            placeholder="Busque um livro"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          <button type="submit">
+            <RxMagnifyingGlass size={24} />
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 

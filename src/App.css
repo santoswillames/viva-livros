@@ -1,5 +1,12 @@
-.App {
+.grid {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "main main"
+    "footer footer";
+
+  grid-template-rows: 120px 4fr 100px;
 }

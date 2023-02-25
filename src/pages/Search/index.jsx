@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
+import styles from "./Search.module.css";
 
 import BookCard from "../../components/BookCard";
 
@@ -28,14 +29,16 @@ const Search = () => {
   }, [query]);
 
   return (
-    <div className="container">
-      <h2>
-        Resultados para: <span>{query}</span>
-      </h2>
-      <div className="content">
-        {books.length === 0 && <p>Carregando...</p>}
-        {books.length > 0 &&
-          books.map((book) => <BookCard key={book.etag} book={book} />)}
+    <div className="container main">
+      <div className={styles.wrapper}>
+        <h2>
+          Resultados para: <span>{query}</span>
+        </h2>
+        <div className={styles.content}>
+          {books.length === 0 && <p>Carregando...</p>}
+          {books.length > 0 &&
+            books.map((book) => <BookCard key={book.etag} book={book} />)}
+        </div>
       </div>
     </div>
   );

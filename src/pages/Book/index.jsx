@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "./Book.css";
+import styles from "./Book.module.css";
+
 import BookCard from "../../components/BookCard";
 
 const bookUrl = import.meta.env.VITE_API;
@@ -25,12 +26,15 @@ const Books = () => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container main">
       {!book && <p>Carregando...</p>}
       {book && (
-        <div className="content description">
+        <div className={styles.content}>
           <BookCard book={book} showLink={false} />
-          <p>{book.volumeInfo.description}</p>
+          <div
+            className={styles.description}
+            dangerouslySetInnerHTML={{ __html: book.volumeInfo.description }}
+          />
         </div>
       )}
     </div>
