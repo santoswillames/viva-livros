@@ -13,10 +13,10 @@ Nessa aplicação o usuário pode buscar por qualquer livro e ver detalhes e o r
 ### Vcoê poderá clonar o repositório e seguir os seguintes passos
 - Navegue até a pasta do projeto
 - Para baixar as dependências execute:
-  ```bash
+```bash
 npm install
 ```
 - Para subir o servidor e executar o projeto:
-  ```bash
+```bash
 npm run dev
 ```
